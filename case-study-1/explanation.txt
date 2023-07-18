@@ -1,0 +1,18 @@
+I would like to share a situation that has happened in the past that is specific to this example.
+
+A few years ago, a major retailer in Nigeria was experiencing a surge in traffic to their website. 
+The website was hosted on a set of EC2 instances, and the traffic was causing the instances to become overloaded.
+This lead to users experiencing slow loading times and errors.
+
+My company assigned me as the DevOps Engineer to the client.
+I decided to use terraform as my Iac(Infrastructure as a code) to improve the sclability and fault tolerance of their infrastructure on aws.
+I created an ASG(auto scaling group) with a flexible capacity configuration, allowing it to automatically adjust the number of instances based on demand.
+The ASG(auto scaling group) was configured to launch instances hosting the website in a private subnet due to prevent it from being exposed to the outside world.
+It was also launched in multiple availability zones. 
+I also created an ALB(Application Load Balancer) to distribute traffic across EC2 instances in the ASG.
+
+After implementing these changes, the retailer's website was able to handle the increased traffic wuthout any problems. 
+Users were able to access the website quickly and without errors.
+
+It was a successful project because it handled availability and scalability. 
+I also ensured security by allowing the asg that launched the EC2 instances in private subnets in multiple availability zone to receive traffic only from the load balancer which was exposed to the internet.
