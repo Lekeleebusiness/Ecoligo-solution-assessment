@@ -1,7 +1,7 @@
 # create security group for the application load balancer
 resource "aws_security_group" "alb_security_group" {
   name        = "${var.project_name}-${var.environment}-alb-sg"
-  description = "enable http/https access on port 80/443"
+  description = "enable http port access on port 80"
   vpc_id      = aws_vpc.vpc.id
 
   ingress {

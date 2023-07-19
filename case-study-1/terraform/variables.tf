@@ -45,6 +45,8 @@ variable "instance_type" {
   default = "t2.micro"
 }
 
+
+#just for testing the server
 variable "ec2_user_data" {
   description = "User data shell script for Apache installation"
   type        = string
