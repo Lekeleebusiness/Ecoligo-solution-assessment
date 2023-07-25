@@ -1,0 +1,26 @@
+In microservices, "outages" refer to situations where one or more microservices in a system become unavailable or stop functioning correctly.
+During an outage, one or more of these microservices may experience issues due to various reasons such as software bugs, hardware failures, network problems, or overwhelming traffic.
+Below are the steps I would take to investigate the cause of the outage and resolve the issue:
+
+1. Gather information about the outage: This includes the time of the outage, the affected services, and any error messages that were generated.
+I would also check the logs for any clues about the cause of the outage.
+
+2. Use diagnostic tools to collect more data: This could include using the ELK stack to collect and analyze logs, using Prometheus and Grafana to monitor metrics. 
+I would also check the Alert Manager to see if any alerts were triggered.
+
+3. Identify the root cause of the outage: This could be a hardware failure, a software bug, or a configuration issue.
+ I would use the data that I collected in the previous steps to narrow down the possible causes.
+
+4. Resolve the issue and restore the application to normal operation: This could involve fixing the bug, configuring the application differently,scaling up node to handle increased load and so on.
+
+Here are some specific diagnostic tools and techniques that I would use:
+The ELK stack (Elasticsearch, Logstash, and Kibana) is a popular tool for collecting, storing, and analyzing logs.
+I would use the ELK stack to search for any patterns or anomalies in the logs that could indicate the cause of the outage.
+
+Prometheus and Grafana are tools for monitoring metrics. I would use Prometheus to collect metrics from the application and Grafana to visualize the metrics. 
+This would help me to identify any spikes or drops in performance that could be related to the outage.
+
+The Alert Manager is a tool for managing alerts. I would check the Alert Manager to see if any alerts were triggered during the outage. 
+This could provide me with clues about the cause of the outage.
+
+Once the issue is resolved, I would monitor the cluster closely to ensure that the issue does not recur and take steps to prevent similar incidents in the future, such as implementing automated scaling or improving application performance. 

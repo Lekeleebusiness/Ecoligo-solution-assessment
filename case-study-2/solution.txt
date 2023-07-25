@@ -1,7 +1,7 @@
 Description of overall architecture:
 The microservice-based application would be a distributed architecture.
 
-Each AWS account represents a logical boundary for different services. 
+Each AWS account would represent a logical boundary for different services. 
 The microservices would be deployed in different AWS accounts, and they would communicate with each other using a variety of methods.
 This allows for better scalability, fault isolation and access control. 
 
