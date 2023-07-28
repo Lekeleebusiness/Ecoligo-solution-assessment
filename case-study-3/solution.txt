@@ -24,3 +24,13 @@ The Alert Manager is a tool for managing alerts. I would check the Alert Manager
 This could provide me with clues about the cause of the outage.
 
 Once the issue is resolved, I would monitor the cluster closely to ensure that the issue does not recur and take steps to prevent similar incidents in the future, such as implementing automated scaling or improving application performance. 
+
+I would also want to share a scenario in which my company's microservices-based application that serves thousands of users daily experienced an outage.
+On a particular day during peak hours, users started reporting errors while using the application. 
+As a DevOps Engineer I began  checking the monitoring systems, including Grafana dashboards and Prometheus metrics, to identify the affected microservices and understand the extent of the outage.
+I also reviewed the logs of the application also by using EFK stack. I also checked network connectivity between the microservices and the database.
+After thorough investigation and analysis, the root cause of the outage was identified.
+The database connection pool for one of the critical microservices reached its maximum capacity during the peak usage hours. As a result, new requests from microservices were unable to establish connections to the database, leading to failures in serving user requests.
+The connection pool settings for the affected microservice were reviewed and adjusted. The maximum connection limit was increased to handle higher concurrent requests during peak hours.
+The microservice underwent extensive load testing to validate the effectiveness of the adjustments made to the connection pool settings and ensure that the application could handle anticipated peak traffic.
+By taking these steps, the issue was resolved  successfully. The development team fixed the database issue as stated when it was discovered to be a database issue.
